@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive student website about location privacy, computing ethics, and U.S. privacy law.">
+  <title>Digital Footprints | Safety, Law & Ethics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Digital Footprints home"><span class="brand-mark">DF</span><span>Digital Footprints</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#learn">Learn</a>
+        <a href="#scenario">Try a scenario</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">SAFETY · LAW · ETHICS</p>
+        <h1>Your location is personal.<br><span>Who should get to see it?</span></h1>
+        <p class="hero-copy">Apps can use location data to give directions or find nearby places. But collecting or sharing it without a good reason can put privacy at risk. Explore the choices developers should make—and test your own judgment.</p>
+        <a class="button button-light" href="#scenario">Start the challenge <span aria-hidden="true">→</span></a>
+        <p class="hero-note">Topic focus: location privacy in apps · Jurisdiction: United States</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="map-pin"><span></span></div>
+        <div class="floating-card card-top"><span class="dot green"></span> Location access <strong>ON</strong></div>
+        <div class="floating-card card-bottom"><span class="lock">⌑</span><div><strong>Your data</strong><small>Think before you share</small></div></div>
+      </div>
+    </section>
+
+    <section class="section intro-grid" id="learn">
+      <div>
+        <p class="eyebrow">01 / THE BIG IDEA</p>
+        <h2>One feature.<br>Three responsibilities.</h2>
+      </div>
+      <div class="intro-text">
+        <p>Location data can reveal where someone lives, studies, works, worships, or spends free time. A responsible app developer should think about more than whether a feature works: they should consider consent, safety, transparency, and the rules that apply.</p>
+        <p class="small-muted">The goal is not to ban useful technology. It is to use personal information in a way people can understand and reasonably control.</p>
+      </div>
+    </section>
+
+    <section class="section cards-section">
+      <div class="section-heading">
+        <p class="eyebrow">THREE LENSES</p>
+        <h2>Safety, ethics, and law are connected—but different.</h2>
+      </div>
+      <div class="three-cards">
+        <article class="info-card safety">
+          <div class="card-icon" aria-hidden="true">◈</div>
+          <p class="card-label">01 · SAFETY</p>
+          <h3>Reduce possible harm</h3>
+          <p>Unexpected location sharing can expose a person's routines or make it easier for strangers to find them.</p>
+          <div class="card-takeaway"><strong>Ask:</strong> Could this feature put someone at risk?</div>
+        </article>
+        <article class="info-card ethics">
+          <div class="card-icon" aria-hidden="true">◎</div>
+          <p class="card-label">02 · ETHICS</p>
+          <h3>Choose what is fair</h3>
+          <p>Ethical design respects privacy, explains data use clearly, asks for meaningful permission, and avoids collecting data that is not needed.</p>
+          <div class="card-takeaway"><strong>Ask:</strong> Is this respectful and fair?</div>
+        </article>
+        <article class="info-card law">
+          <div class="card-icon" aria-hidden="true">§</div>
+          <p class="card-label">03 · LAW</p>
+          <h3>Follow legal rules</h3>
+          <p>In the United States, Section 5 of the Federal Trade Commission Act prohibits unfair or deceptive acts or practices in or affecting commerce.</p>
+          <div class="card-takeaway"><strong>Ask:</strong> Could this break a rule or mislead users?</div>
+        </article>
+      </div>
+      <p class="legal-note"><strong>Important distinction:</strong> Something can be a poor ethical choice without automatically being illegal. Whether conduct violates a law depends on the facts and applicable rules.</p>
+    </section>
+
+    <section class="section scenario-section" id="scenario">
+      <div class="scenario-copy">
+        <p class="eyebrow">02 / MAKE A DECISION</p>
+        <h2>You're designing a campus map app.</h2>
+        <p>Your app needs location access to show a student's position on the map. A teammate suggests collecting location in the background all day and sharing it with an advertising partner—even when the map is closed.</p>
+        <p class="scenario-question">What is the best next step?</p>
+        <p class="small-muted">Choose an option to see feedback explaining the trade-offs.</p>
+      </div>
+      <div class="decision-panel">
+        <div class="decision-top"><span class="status-dot"></span><span>DESIGN REVIEW</span><span class="case-number">CASE 01</span></div>
+        <button class="choice" data-choice="A"><span class="choice-letter">A</span><span><strong>Collect it all</strong><small>More data might be useful for future features.</small></span><span class="choice-arrow">↗</span></button>
+        <button class="choice" data-choice="B"><span class="choice-letter">B</span><span><strong>Collect only what is needed</strong><small>Explain why location is needed and give users control.</small></span><span class="choice-arrow">↗</span></button>
+        <button class="choice" data-choice="C"><span class="choice-letter">C</span><span><strong>Hide it in the settings</strong><small>Keep tracking on, but make the notice hard to find.</small></span><span class="choice-arrow">↗</span></button>
+        <div id="scenario-feedback" class="feedback-box" role="status" aria-live="polite">
+          <strong>Your feedback will appear here.</strong>
+          <p>Select an option above to see how it affects privacy, ethics, and legal risk.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section checklist-section">
+      <div class="section-heading">
+        <p class="eyebrow">A PRACTICAL CHECKLIST</p>
+        <h2>Before an app asks for location…</h2>
+      </div>
+      <div class="checklist">
+        <label class="check-row"><input type="checkbox"><span class="check-custom"></span><span><strong>Explain the reason</strong><small>Tell people what the app needs location for.</small></span></label>
+        <label class="check-row"><input type="checkbox"><span class="check-custom"></span><span><strong>Request the minimum</strong><small>Do not collect more detail or keep it longer than needed.</small></span></label>
+        <label class="check-row"><input type="checkbox"><span class="check-custom"></span><span><strong>Offer real choices</strong><small>Make permissions and settings understandable and accessible.</small></span></label>
+        <label class="check-row"><input type="checkbox"><span class="check-custom"></span><span><strong>Protect and limit sharing</strong><small>Secure stored data and be clear about any sharing.</small></span></label>
+      </div>
+      <p class="checklist-progress" id="checklist-progress" aria-live="polite">0 of 4 principles checked</p>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="quiz-intro">
+        <p class="eyebrow">03 / CHECK YOUR UNDERSTANDING</p>
+        <h2>Can you spot the better choice?</h2>
+        <p>Answer all three questions. Each answer gives an explanation, not just a score.</p>
+      </div>
+      <form id="quiz-form" class="quiz-form">
+        <fieldset class="question" data-answer="b">
+          <legend><span>01</span> A flashlight app asks for your precise location, but the feature does not need it. What should you do?</legend>
+          <label><input type="radio" name="q1" value="a"><span>Allow it because all apps need location data.</span></label>
+          <label><input type="radio" name="q1" value="b"><span>Question the permission and deny it if it is unnecessary.</span></label>
+          <label><input type="radio" name="q1" value="c"><span>Allow it because permissions never affect privacy.</span></label>
+          <p class="question-feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="question" data-answer="c">
+          <legend><span>02</span> Under U.S. federal law, what does Section 5 of the FTC Act prohibit?</legend>
+          <label><input type="radio" name="q2" value="a"><span>Every app that collects any personal information.</span></label>
+          <label><input type="radio" name="q2" value="b"><span>All use of GPS for maps and directions.</span></label>
+          <label><input type="radio" name="q2" value="c"><span>Unfair or deceptive acts or practices in or affecting commerce.</span></label>
+          <p class="question-feedback" aria-live="polite"></p>
+        </fieldset>
+        <fieldset class="question" data-answer="a">
+          <legend><span>03</span> A company says it never shares location data, but secretly sells it. Which concern is most directly raised?</legend>
+          <label><input type="radio" name="q3" value="a"><span>Deception and a breach of user trust.</span></label>
+          <label><input type="radio" name="q3" value="b"><span>A problem with screen brightness.</span></label>
+          <label><input type="radio" name="q3" value="c"><span>No concern, because a privacy statement is optional to follow.</span></label>
+          <p class="question-feedback" aria-live="polite"></p>
+        </fieldset>
+        <div class="quiz-actions">
+          <button class="button button-dark" type="submit">Check my answers</button>
+          <button class="button button-outline" type="button" id="reset-quiz">Try again</button>
+        </div>
+        <div id="quiz-result" class="quiz-result" role="status" aria-live="polite">Your score will appear here after you submit.</div>
+      </form>
+    </section>
+
+    <section class="section reflection-section">
+      <div>
+        <p class="eyebrow">04 / APPLY IT</p>
+        <h2>What would you improve?</h2>
+        <p>Use this short reflection to connect the lesson to a real design decision. Your response stays in this browser page; it is not sent to a server.</p>
+      </div>
+      <form id="reflection-form" class="reflection-form">
+        <label for="reflection">Name one change that would make an app's location practices more ethical.</label>
+        <textarea id="reflection" rows="4" placeholder="For example, I would…" required></textarea>
+        <button class="button button-dark" type="submit">Show my reflection</button>
+        <div id="reflection-output" class="reflection-output" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="sources-section" id="sources">
+      <div class="section sources-inner">
+        <p class="eyebrow">GO FURTHER</p>
+        <h2>Sources & further reading</h2>
+        <p>These sources support the privacy advice and legal summary used on this site.</p>
+        <div class="source-list">
+          <a class="source-item" href="https://www.ftc.gov/about-ftc/mission/enforcement-authority" target="_blank" rel="noopener noreferrer">
+            <span class="source-number">01</span><span><strong>Federal Trade Commission — Enforcement Authority</strong><small>Official U.S. federal source explaining Section 5 of the FTC Act and the FTC's enforcement role.</small></span><span class="external">↗</span>
+          </a>
+          <a class="source-item" href="https://consumer.ftc.gov/articles/heads-up" target="_blank" rel="noopener noreferrer">
+            <span class="source-number">02</span><span><strong>Federal Trade Commission — Heads Up: Stop. Think. Connect.</strong><small>Consumer guidance on location settings, app permissions, and protecting personal information.</small></span><span class="external">↗</span>
+          </a>
+          <a class="source-item" href="https://www.oag.ca.gov/privacy/facts/online-privacy/location" target="_blank" rel="noopener noreferrer">
+            <span class="source-number">03</span><span><strong>California Department of Justice — Location, Location, Location</strong><small>State government guidance explaining how apps can access location and how users can manage permissions.</small></span><span class="external">↗</span>
+          </a>
+        </div>
+        <p class="source-note">Legal scope: This project describes Section 5 of the U.S. Federal Trade Commission Act at a high level. It is an educational overview, not legal advice. Other federal or state laws may apply depending on the person, app, data, and circumstances.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner"><span>Digital Footprints · Safety, Law & Ethics</span><span>Think critically. Design responsibly.</span></div>
+  </footer>
+</body>
+</html>
